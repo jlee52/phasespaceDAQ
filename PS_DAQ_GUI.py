@@ -170,11 +170,11 @@ class DAQ():
                 if "markers" in evt:
                     for m in evt.markers:
                         if m.id == 0:
-                            self.mocap.write("%8d" "\t" "%8d" "\t" "%8d" "\t" "%8d" "\t" % (m.time, m.x, m.y, m.z)) 
+                            self.mocap.write("%8d" "\t" "%.5f" "\t" "%.5f" "\t" "%.5f" "\t" % (m.time, m.x, m.y, m.z)) 
                         elif m.id == self.n_markers-1:
-                            self.mocap.write("%8d" "\t" "%8d" "\t" "%8d" "\n" % (m.x, m.y, m.z))
+                            self.mocap.write("%.5f" "\t" "%.5f" "\t" "%.5f" "\n" % (m.x, m.y, m.z))
                         else:
-                            self.mocap.write("%8d" "\t" "%8d" "\t" "%8d" "\t" % (m.x, m.y, m.z)) 
+                            self.mocap.write("%.5f" "\t" "%.5f" "\t" "%.5f" "\t" % (m.x, m.y, m.z)) 
                         #print(m)
 
             # Get analog data
