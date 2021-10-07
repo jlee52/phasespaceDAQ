@@ -127,7 +127,7 @@ class DAQ():
         print(fname_ai)
 
         msg_open = self.OWL.open(self.ip)
-        msg_init = self.OWL.initialize("streaming=1 event.inputs=1 profile=LowerBodyProfile")
+        msg_init = self.OWL.initialize("streaming=1 event.inputs=1 profile=LowerBodyProfile system.LEDPower=0.3")
         print("# open: ", msg_open)
         print("# init: ", msg_init)
 
